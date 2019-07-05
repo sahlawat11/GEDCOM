@@ -18,6 +18,6 @@ if __name__ == '__main__':
     result1 = not unittest.TextTestRunner(verbosity=2).run(suit1).wasSuccessful()
     result2 = not unittest.TextTestRunner(verbosity=2).run(suit2).wasSuccessful()
     result3 = not unittest.TextTestRunner(verbosity=2).run(suit3).wasSuccessful()
-    print('********************:', result1, result2, result3);
-    unit_tests_result = result1 and result2 and result3
+    
+    unit_tests_result = not (result1 and result2 and result3)
     sys.exit(result1)
