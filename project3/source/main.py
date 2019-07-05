@@ -19,4 +19,5 @@ if __name__ == '__main__':
     result2 = unittest.TextTestRunner(verbosity=2).run(suit2).wasSuccessful()
     result3 = unittest.TextTestRunner(verbosity=2).run(suit3).wasSuccessful()
 
+    print("*********************:", result1)
     sys.exit(result1)
