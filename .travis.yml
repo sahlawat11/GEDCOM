@@ -3,4 +3,4 @@ python:
   - 3.6
 intall:
   - pip install -r requirements.txt
-script: python3 /home/travis/build/sahlawat11/GEDCOM/project3/source/test.py
+script: python3 /home/travis/build/sahlawat11/GEDCOM/project3/source/main.py
