@@ -15,7 +15,7 @@ if __name__ == '__main__':
     suit1 = unittest.TestLoader().loadTestsFromModule(util_date)
     suit2 = unittest.TestLoader().loadTestsFromModule(unit_test_us1_us2_us3_us4_us5_us6_us10)
     suit3 = unittest.TestLoader().loadTestsFromModule(US07_US08_Test_Suite)
-    result1 = unittest.TextTestRunner(verbosity=2).run(suit1).wasSuccessful()
+    result1 = not unittest.TextTestRunner(verbosity=2).run(suit1).wasSuccessful()
     result2 = unittest.TextTestRunner(verbosity=2).run(suit2).wasSuccessful()
     result3 = unittest.TextTestRunner(verbosity=2).run(suit3).wasSuccessful()
 
