@@ -1,5 +1,6 @@
 import unittest
 import os
+import sys
 
 from gedcom_file_parser import print_pretty_table
 import util_date
@@ -14,7 +15,9 @@ if __name__ == '__main__':
     suit1 = unittest.TestLoader().loadTestsFromModule(util_date)
     suit2 = unittest.TestLoader().loadTestsFromModule(unit_test_us1_us2_us3_us4_us5_us6_us10)
     suit3 = unittest.TestLoader().loadTestsFromModule(US07_US08_Test_Suite)
-    unittest.TextTestRunner(verbosity=2).run(suit1)
-    unittest.TextTestRunner(verbosity=2).run(suit2)
-    unittest.TextTestRunner(verbosity=2).run(suit3)
-
+    result1 = not unittest.TextTestRunner(verbosity=2).run(suit1).wasSuccessful()
+    result2 = not unittest.TextTestRunner(verbosity=2).run(suit2).wasSuccessful()
+    result3 = not unittest.TextTestRunner(verbosity=2).run(suit3).wasSuccessful()
+    
+    unit_tests_result = not (result1 and result2 and result3)
+    sys.exit(result1)

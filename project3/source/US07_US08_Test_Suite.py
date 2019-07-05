@@ -1,8 +1,6 @@
 from US07_US08_Source_File import check_150_years_age, check_birth_before_marriage_of_parents
 from util_date import Date
 from gedcom_file_parser import gedcom_file_parser, print_pretty_table
-import io
-import os
 import sys
 import unittest
 import datetime
